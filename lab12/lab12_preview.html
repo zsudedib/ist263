@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    <style>
+        body{
+            width: 100vw;
+        }
+        main{
+           
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        #walnut1,#walnut2,#walnut3{
+            position: relative;
+            max-height: 300px;
+        }
+        
+        #walnut1{
+            order: 1;
+        }
+        #walnut2{
+            order: 2;
+        }
+        #walnut3{
+            order: 3;
+        }
+
+    </style>
+
+</head>
+<body onload="shuffleShells();">
+
+    <h1>
+        Pick a Walnut
+    </h1>
+    
+    <main>
+        <img src="walnut.png" alt="walnut" id="walnut1" onclick="winnerMessage();">
+        <img src="walnut.png" alt="walnut" id="walnut2" onclick="loserMessage();">
+        <img src="walnut.png" alt="walnut" id="walnut3" onclick="loserMessage();">
+    </main>
+
+
+    
+
+    <script>
+        function shuffleShells() {
+            document.getElementById("walnut1").style.order = Math.floor((Math.random()*3)+2)
+        }
+        function winnerMessage() {
+            alert("You won!")
+        }
+        function loserMessage() {
+            alert("Wrong. Try again.")
+        }
+    </script>
+</body>
+</html>

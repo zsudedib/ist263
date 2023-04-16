@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    <style>
+        body{
+            width: 100vw;
+        }
+        main{
+           
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #pea{
+            max-height: 300px;
+        }
+
+        div{
+            position: relative;
+            max-height: 300px;
+        }
+        #walnut3{
+            position: absolute;
+            display: inline;
+        }
+
+        .walnut{
+            z-index: 10;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>
+        Pick a Walnut
+    </h1>
+    
+    <main>
+        <img src="walnut.png" alt="walnut" class="walnut">
+        <img src="walnut.png" alt="walnut" class="walnut">
+        <div>
+            <img src="walnut.png" alt="walnut" id="walnut3">
+            <img src="pea.png" alt="pea" id="pea">
+        </div>
+    </main>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
