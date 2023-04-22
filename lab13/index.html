@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <style>
+        body{
+            color: white;
+            background: #000;
+        }
+        .planets{
+            width: 100vw;
+            height: 10em;
+            display:flex
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="planets">
+        <img src="mercury.png" alt="mercury" class="planet">
+        <img src="venus.png" alt="venus" class="planet">
+        <img src="earth.png" alt="earth"class="planet">
+        <img src="mars.png" alt="mars"class="planet">
+        <img src="jupiter.png" alt="jupiter"class="planet">
+        <img src="saturn.png" alt="saturn"class="planet">
+        <img src="uranus.png" alt="uranus"class="planet">
+        <img src="neptune.png" alt="neptune"class="planet">
+    </div>
+    
+    <h1 class="header"></h1>
+    <p class="text"></p>
+
+    <script>
+        headers = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+        array = ["The smallest and fastest planet, Mercury is the closest planet to the Sun and whips around it every 88 Earth days.","Spinning in the opposite direction to most planets, Venus is the hottest planet, and one of the brightest objects in the sky","The place we call home, Earth is the third rock from the sun and the only planet with known life on it - and lots of it too!","The red planet is dusty, cold world with a thin atmosphere and is home to four NASA robots.","Jupiter is a massive planet, twice the size of all other planets combined, and has a centuries-old storm that is bigger than Earth.","The most recognizable planet with a system of icy rings, Saturn is a very unique and interesting planet.","Uranus has a very unique rotation--it spins on its side at an almost 90-degree angle, unlike other planets","Neptune is now the most distant planet and is a cold and dark world nearly 3 billion miles from the Sun."]
+
+
+        for (let index = 0; index < array.length; index++) {
+        $(".planet")[index].onclick = () =>{
+            $(".header")[0].textContent = headers[index]
+            $(".text")[0].textContent = array[index]
+        }     
+
+        }
+
+
+    </script>
+</body>
+</html>
