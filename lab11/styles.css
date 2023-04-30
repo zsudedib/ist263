@@ -46,7 +46,8 @@ nav a{
     width: 40vw;
     margin-right: 10px;
     justify-self: center;
-
+    width: 15em;
+    border-radius: 50%;
 }
 
 .clear{
