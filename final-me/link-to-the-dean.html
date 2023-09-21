@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Text</title>
+    <title>Link</title>
     <style>
         body {
             margin: 0;
@@ -12,26 +12,95 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f0f0f0;
+            background-color: #000;
         }
         
         .center-text {
+            position: relative;
             font-size: 36px;
             text-align: center;
+            color: #fff;
         }
     </style>
 </head>
 <body>
+
     <div class="center-text">
-        Two. Twenty. Three.
+        Room number:
     </div>
 
 
 </body>
 
 <script>
-    text = Document.getElementByClassName("center-text")[0];
+    text = document.getElementsByClassName("center-text")[0];
     console.log(text);
+
+    fonts = ["Tahoma","times new roman","georgia","garamond","courier new","brush script mt"]
+
+    arr = ["222. 222. 33333.","two. two. three."]
+
+    // while (true) {
+        n = 0;
+        // setInterval(() => {
+        //     text.innerHTML = arr[i%2]
+        //     console.log(arr[0]);
+        //     i++;
+        // }, 1000);
+
+            
+        setInterval(() => {
+            text.innerHTML = ""
+            a = arr[n%2]
+
+            x = ""
+
+            
+            
+            // for (let i = 0; i < a.length; i++) {
+
+            //     // console.log(a[i]);
+            //     a[i] = arr[Math.round(Math.random())][i];
+            //     k = arr[Math.round(Math.random())][i];
+            //     x+=k;
+            //     // console.log(a);
+                
+            //     text.innerHTML +=k;
+      
+
+            // }
+            i = 0
+            innerInterval = setInterval(() => {
+                console.log(i);
+                a[i] = arr[Math.round(Math.random())][i];
+                k = arr[Math.round(Math.random())][i];
+                x+=k;
+                // console.log(a);
+                
+                text.innerHTML +="<span class='sp'>"+k+"</span>";
+                span = document.getElementsByClassName("sp")[i]
+                span.style.fontFamily = fonts[Math.floor(Math.random()*fonts.length)];
+                i++
+                console.log(fonts[Math.floor(Math.random()*fonts.length)]);
+                
+            }, 1000/a.length);
+
+
+            setTimeout(() => {
+    clearInterval(innerInterval);
+    // console.log("Inner interval stopped after 5 seconds");
+  }, 1000);
+
+            
+            console.log(x);
+            
+            // text.innerHTML = x
+            n++;
+        }, 100*10);
+
+  
+    // }
+
 
 </script>
 
