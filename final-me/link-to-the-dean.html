@@ -13,20 +13,32 @@
             align-items: center;
             min-height: 100vh;
             background-color: #000;
+            
         }
         
         .center-text {
+            font-family: "courier new";
             position: relative;
             font-size: 36px;
             text-align: center;
             color: #fff;
+            animation: fade 0.8s linear;
+        }
+
+        @keyframes fade{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="center-text">
-        Room number:
+        room_number:
     </div>
 
 
@@ -38,7 +50,7 @@
 
     fonts = ["Tahoma","times new roman","georgia","garamond","courier new","brush script mt"]
 
-    arr = ["222. 222. 33333.","two. two. three."]
+    arr = ["222.  222.  33333.  ","two.  two.  three.  "]
 
     // while (true) {
         n = 0;
@@ -83,20 +95,20 @@
                 i++
                 console.log(fonts[Math.floor(Math.random()*fonts.length)]);
                 
-            }, 1000/a.length);
+            }, 2000/a.length);
 
 
             setTimeout(() => {
     clearInterval(innerInterval);
     // console.log("Inner interval stopped after 5 seconds");
-  }, 1000);
+  }, 2000);
 
             
             console.log(x);
             
             // text.innerHTML = x
             n++;
-        }, 100*10);
+        }, 300*10);
 
   
     // }
